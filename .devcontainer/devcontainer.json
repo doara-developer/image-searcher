@@ -12,18 +12,19 @@
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 
 		"terminal.integrated.shell.linux": "/bin/bash",
-		"python.pythonPath": "/usr/local/bin/python",
+		"python.pythonPath": "/workspaces/image-searcher/.venv/bin/python",
 		"python.linting.enabled": true,
-		"python.linting.pylintEnabled": true,
-		"python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
-		"python.formatting.blackPath": "/usr/local/py-utils/bin/black",
-		"python.formatting.yapfPath": "/usr/local/py-utils/bin/yapf",
-		"python.linting.banditPath": "/usr/local/py-utils/bin/bandit",
-		"python.linting.flake8Path": "/usr/local/py-utils/bin/flake8",
-		"python.linting.mypyPath": "/usr/local/py-utils/bin/mypy",
-		"python.linting.pycodestylePath": "/usr/local/py-utils/bin/pycodestyle",
-		"python.linting.pydocstylePath": "/usr/local/py-utils/bin/pydocstyle",
-		"python.linting.pylintPath": "/usr/local/py-utils/bin/pylint"
+		"python.linting.pylintEnabled": false,
+		"python.linting.flake8Enabled": true,
+		"python.formatting.autopep8Path": "/workspaces/image-searcher/.venv/bin/autopep8",
+		"python.formatting.blackPath": "/workspaces/image-searcher/.venv/bin/black",
+		"python.formatting.yapfPath": "/workspaces/image-searcher/.venv/bin/yapf",
+		"python.linting.banditPath": "/workspaces/image-searcher/.venv/bin/bandit",
+		"python.linting.flake8Path": "/workspaces/image-searcher/.venv/bin/flake8",
+		"python.linting.mypyPath": "/workspaces/image-searcher/.venv/bin/mypy",
+		"python.linting.pycodestylePath": "/workspaces/image-searcher/.venv/bin/pycodestyle",
+		"python.linting.pydocstylePath": "/workspaces/image-searcher/.venv/bin/pydocstyle",
+		"python.linting.pylintPath": "/workspaces/image-searcher/.venv/bin/pylint"
 	},
 
 	// Add the IDs of extensions you want installed when the container is created.
