@@ -5,17 +5,18 @@
 	"build": {
 		"dockerfile": "Dockerfile",
 		"context": "..",
-		// Update 'VARIANT' to pick a Python version: 3, 3.6, 3.7, 3.8 
+		// Update 'VARIANT' to pick a Python version: 3, 3.6, 3.7, 3.8
 		"args": { "VARIANT": "3" }
 	},
 
 	// Set *default* container specific settings.json values on container create.
-	"settings": { 
+	"settings": {
 		"terminal.integrated.shell.linux": "/bin/bash",
 		"python.pythonPath": "/workspaces/image-searcher/.venv/bin/python",
 		"python.linting.enabled": true,
 		"python.linting.pylintEnabled": false,
-		"python.linting.flake8Enabled": true,
+        "python.linting.flake8Enabled": true,
+		"python.linting.banditEnabled": false,
 		"python.formatting.autopep8Path": "/workspaces/image-searcher/.venv/bin/autopep8",
 		"python.formatting.blackPath": "/workspaces/image-searcher/.venv/bin/black",
 		"python.formatting.yapfPath": "/workspaces/image-searcher/.venv/bin/yapf",
