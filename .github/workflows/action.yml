@@ -37,3 +37,12 @@ jobs:
             - run: pip install -r requirements.txt
             - run: poetry install
             - run: sh util.sh test
+    push-container:
+        name: push-container
+        runs-on: ubuntu-latest
+        needs: [bandit, flake8, test]
+        steps:
+            - uses: actions/checkout@master
+            - run: docker build . --file Dockerfile --tag docker.pkg.github.com/doara-developer/image-searcher:latest
+            - run: docker login docker.pkg.github.com -u doara-developer -p ${{ secrets.DEPLOY_TOKEN }}
+            - run: docker push docker.pkg.github.com/doara-developer/image-searcher:latest
