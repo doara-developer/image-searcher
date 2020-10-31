@@ -43,6 +43,6 @@ jobs:
         needs: [bandit, flake8, test]
         steps:
             - uses: actions/checkout@master
-            - run: docker build . --file Dockerfile --tag docker.pkg.github.com/doara-developer/image-searcher:latest
+            - run: docker build . --file Dockerfile --tag docker.pkg.github.com/doara-developer/image-searcher/image-searcher:latest
             - run: docker login docker.pkg.github.com -u doara-developer -p ${{ secrets.DEPLOY_TOKEN }}
-            - run: docker push docker.pkg.github.com/doara-developer/image-searcher:latest
+            - run: docker push docker.pkg.github.com/doara-developer/image-searcher/image-searcher:latest
