@@ -12,6 +12,10 @@ The following commands install requirements library.
 pip install -r requirements.txt
 poetry install
 ```
+## Preparation
+Set following environment variable.
+
+`BingAPIKey`: API key for using Bing Image Search
 
 ## How to run server
 The following commands run server.
