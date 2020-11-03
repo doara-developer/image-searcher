@@ -7,7 +7,7 @@ from models.search_result import SearchResult
 class BingConnector():
     """Bing connector class"""
 
-    API_URL = 'https://api.cognitive.microsoft.com/bing/v7.0/images'
+    API_URL = 'https://api.bing.microsoft.com/v7.0/images'
 
     def __init__(self, api_key):
         """
