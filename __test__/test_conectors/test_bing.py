@@ -9,6 +9,7 @@ from connectors.bing import BingConnector
 
 class TestBingConnector(object):
     """Test for BingConnector model."""
+    assert_endpoint = 'https://api.bing.microsoft.com/v7.0/images'
     dummy_api_key = 'dummy_api_key'
     dummy_keyword = 'dummy_keyword'
     dummy_image_id_1 = 'dummy_image_id_1'
@@ -41,6 +42,7 @@ class TestBingConnector(object):
         """Test init"""
         connector = BingConnector(self.dummy_api_key)
         assert connector.api_key == self.dummy_api_key
+        assert connector.API_URL == self.assert_endpoint
 
     @patch('requests.get')
     def test_search(self, mock):
